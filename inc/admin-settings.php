@@ -11,8 +11,8 @@ class blogen_Admin_Settings {
 	 * Enqueue scripts for admin page
 	 */
 	function admin_scripts( $hook ) {
-		if ( $hook === 'widgets.php' || $hook === 'appearance_page_ft_site'  ) {
-			wp_enqueue_style( 'mainsite-admin-css', get_template_directory_uri() . '/assets/css/admin-settings.css' );
+		if ( $hook === 'appearance_page_ft_blogen'  ) {
+			wp_enqueue_style( 'blogen-admin-css', get_template_directory_uri() . '/assets/css/admin-settings.css' );
 		}
 	}
 
@@ -44,7 +44,7 @@ class blogen_Admin_Settings {
                                 <div class="mainsite-dashboard-btn"><a href="<?php echo esc_url(admin_url('customize.php')); ?>#accordion-section-sub_header_banner" class="button button-primary"><?php esc_html_e('Start Customizing', 'blogen'); ?></a></div>
                         </div><!--/.mainsite-theme-dashboard-card-->
                         <div class="mainsite-dashboard-intro mainsite-dashboard-gap infoBox">
-                            <h3 class="mainsite-dashboard-title"><?php esc_html_e( 'Ultimate Post Blocks', 'blogen' ); ?></h3>
+                            <h3 class="mainsite-dashboard-title"><?php esc_html_e( 'Gutenberg Post Blocks', 'blogen' ); ?></h3>
                             <?php esc_html_e('Ultimate Post Blocks is a Gutenberg post block plugins for creating beautiful Gutenberg post grid blocks, post listing blocks, post slider blocks and post carousel blocks within a few seconds.', 'blogen'); ?>
                             <div class="mainsite-dashboard-btn"><a href="https://wordpress.org/plugins/ultimate-post/" target="_blank" class="button button-primary"><?php esc_html_e('Free Download', 'blogen'); ?></a></div>
                         </div>

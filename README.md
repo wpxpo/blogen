@@ -48,8 +48,9 @@ Blogen is a modern and flexible multipurpose blog WordPress theme. That can help
 
 This software uses the following open source packages:
 
-- [Bootstrap v4.1.3](https://github.com/twbs/bootstrap/)
+- [fontello](http://fontello.com/)
 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+- [TGM Plugin](https://github.com/TGMPA/TGM-Plugin-Activation)
 - [Alpha Color Picker JS](https://github.com/BraadMartin/components/tree/master/alpha-color-picker)
 
 Screenshot image using:
