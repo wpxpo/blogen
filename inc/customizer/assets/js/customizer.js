@@ -8,7 +8,7 @@ jQuery(document).ready(function($){ 'use strict';
     // Export Cuatomizer Data
     $(document).on('click', '#mainsite-export-data', function (e) {
 		e.preventDefault();
-        window.location.href = blogon_kit.ajax_url+'?action=blogon_export_data';
+        window.location.href = blogen_kit.ajax_url+'?action=blogen_export_data';
 	});
 
     // Import Cuatomizer Data
@@ -20,7 +20,7 @@ jQuery(document).ready(function($){ 'use strict';
 
 		if (typeof file_data == 'undefined') {
 			status.addClass('mainsite-import-error')
-			status.text(blogon_kit.file_error);
+			status.text(blogen_kit.file_error);
 			setTimeout(function () {
 				status.removeClass('mainsite-import-error')
 				status.text('');
@@ -31,10 +31,10 @@ jQuery(document).ready(function($){ 'use strict';
 		let form_data = new FormData(); 
 		form_data.append('file', file_data);
     	form_data.append('name', file_data.name);
-		form_data.append('action', 'blogon_import_data');
+		form_data.append('action', 'blogen_import_data');
 		
 		$.ajax({
-			url: blogon_kit.ajax_url,
+			url: blogen_kit.ajax_url,
 			cache: false,
             contentType: false,
             processData: false,
@@ -43,7 +43,7 @@ jQuery(document).ready(function($){ 'use strict';
 			success: function (html) {
 				if (html == 1) {
 					status.addClass( 'mainsite-import-success' )
-					status.text( blogon_kit.import_success );
+					status.text( blogen_kit.import_success );
 					setTimeout( function () { location.reload(); }, 2000);
 					setTimeout( function () {
                         status.removeClass('mainsite-import-success'); 
@@ -51,7 +51,7 @@ jQuery(document).ready(function($){ 'use strict';
 					}, 10000 );
 				} else {
 					status.addClass('mainsite-import-error')
-					status.text(blogon_kit.import_error);
+					status.text(blogen_kit.import_error);
 					setTimeout(function () {
 						status.removeClass('mainsite-import-error')
 						status.text('');
@@ -60,7 +60,7 @@ jQuery(document).ready(function($){ 'use strict';
 			},
 			error: function () {
 				status.addClass('mainsite-import-error')
-				status.text(blogon_kit.import_error);
+				status.text(blogen_kit.import_error);
 
 				setTimeout(function () {
 					status.removeClass('mainsite-import-error')

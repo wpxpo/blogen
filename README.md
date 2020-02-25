@@ -1,10 +1,10 @@
-<h1 align="center">Blogon</h1>
+<h1 align="center">Blogen</h1>
 
 <h4 align="center">Responsive WordPress Theme news theme built for personal blog, blogging, blogger, journal, lifestyle, magazine, photography, editorial, traveler and so on.</h4>
 <br>
 
 <p align="center">
-<a href="https://github.com/wpxpo/blogon/archive/master.zip">Download Now</a>
+<a href="https://github.com/wpxpo/blogen/archive/master.zip">Download Now</a>
 </p>
 
 <br>
@@ -23,7 +23,7 @@
 
 <br>
 
-![screenshot](https://raw.githubusercontent.com/wpxpo/blogon/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/wpxpo/blogen/master/screenshot.png)
 
 ## Key Features
 
@@ -38,11 +38,11 @@
 
 ## Download
 
-[Click here to download](https://github.com/wpxpo/blogon/archive/master.zip) the latest release package of Blogon for WordPress.
+[Click here to download](https://github.com/wpxpo/blogen/archive/master.zip) the latest release package of Blogen for WordPress.
 
 ## Showcase
 
-Blogon is a modern and flexible multipurpose blog WordPress theme. That can help you to create amazing website like personal blog, blogging, blogger, journal, lifestyle, magazine, photography, editorial, traveler and so on. Rich customizer options can help you to empower your site customization. Well optimize CSS and perfectly positioned rich snippet make this theme responsive and SEO friedly. It’s perfect for you to create a blogging site without any concern.
+Blogen is a modern and flexible multipurpose blog WordPress theme. That can help you to create amazing website like personal blog, blogging, blogger, journal, lifestyle, magazine, photography, editorial, traveler and so on. Rich customizer options can help you to empower your site customization. Well optimize CSS and perfectly positioned rich snippet make this theme responsive and SEO friedly. It’s perfect for you to create a blogging site without any concern.
 
 ## Credits
 

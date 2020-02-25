@@ -5,7 +5,7 @@ if( !class_exists( 'WP_Customize_Control' ) ){
 	return null;
 }
 
-class blogon_Select_Control extends WP_Customize_Control {
+class blogen_Select_Control extends WP_Customize_Control {
 
 	public $type = 'select';
 	public $options;

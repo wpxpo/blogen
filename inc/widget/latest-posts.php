@@ -1,15 +1,15 @@
 <?php
 
-add_action('widgets_init','blogon_blog_posts_widget');
+add_action('widgets_init','blogen_blog_posts_widget');
 
-function blogon_blog_posts_widget() {
-	register_widget('blogon_blog_posts_widget');
+function blogen_blog_posts_widget() {
+	register_widget('blogen_blog_posts_widget');
 }
 
-class blogon_blog_posts_widget extends WP_Widget{
+class blogen_blog_posts_widget extends WP_Widget{
 
 	function __construct(){
-		parent::__construct( 'blogon_blog_posts_widget',__('Blogon blog Posts','blogon'),array('description' => __('Blogon post widget to display blog posts','blogon')));
+		parent::__construct( 'blogen_blog_posts_widget',__('Blogen blog Posts','blogen'),array('description' => __('Blogen post widget to display blog posts','blogen')));
 	}
 
 	function widget($args, $instance) {
@@ -45,14 +45,14 @@ class blogon_blog_posts_widget extends WP_Widget{
 		if(count($postQuery)>0){
 			$output .='<div class="mainsite-blog-widget-wrap ' . esc_attr($order_by) . '">';
             foreach ($postQuery as $item): setup_postdata($item);
-                $blogon_date_format = get_option( 'date_format' );
+                $blogen_date_format = get_option( 'date_format' );
 				$output .='<div class="mainsite-blog-media media">';
 					if(has_post_thumbnail()):	
 						$output .='<a href="'.esc_url(get_permalink($item->ID)).'">'.get_the_post_thumbnail( $item->ID, 'thumbnail', array('class' => 'd-flex mr-3')).'</a>';	
 					endif;
 					$output .='<div class="media-body">';
 					$output .= '<h4 class="mainsite-blog-widget-title mt-0"><a href="'.esc_url(get_permalink($item->ID)).'">'. get_the_title($item->ID) .'</a></h4>';
-					$output .= '<span class="mainsite-blog-widget-date">'. get_the_date($blogon_date_format, $item->ID) .'</span>';
+					$output .= '<span class="mainsite-blog-widget-date">'. get_the_date($blogen_date_format, $item->ID) .'</span>';
 					$output .='</div>';
 				$output .='</div>';
 			endforeach;
@@ -75,22 +75,22 @@ class blogon_blog_posts_widget extends WP_Widget{
 
 	function form($instance) {
 		$defaults = array( 
-			'title' 	=> __('Popular Posts', 'blogon'),
+			'title' 	=> __('Popular Posts', 'blogen'),
 			'order_by' 	=> 'latest',
 			'count' 	=> 2
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php esc_html_e('Widget Title', 'blogon'); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php esc_html_e('Widget Title', 'blogen'); ?></label>
 			<input id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" value="<?php echo esc_attr($instance['title']); ?>" style="width:100%;" />
 		</p>
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id( 'order_by' )); ?>"><?php esc_html_e('Ordered By', 'blogon'); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id( 'order_by' )); ?>"><?php esc_html_e('Ordered By', 'blogen'); ?></label>
 			<?php 
 				$options = array(
-					'popular' 	=> __('Popular', 'blogon'),
-					'latest' 	=> __('Latest', 'blogon'),
-					'comments'	=> __('Most Commented', 'blogon'),
+					'popular' 	=> __('Popular', 'blogen'),
+					'latest' 	=> __('Latest', 'blogen'),
+					'comments'	=> __('Most Commented', 'blogen'),
 				);
 				if(isset($instance['order_by'])) $order_by = $instance['order_by'];
 			?>
@@ -108,7 +108,7 @@ class blogon_blog_posts_widget extends WP_Widget{
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id( 'count' )); ?>"><?php esc_html_e('Count', 'blogon'); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id( 'count' )); ?>"><?php esc_html_e('Count', 'blogen'); ?></label>
 			<input id="<?php echo esc_attr($this->get_field_id( 'count' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'count' )); ?>" value="<?php echo esc_attr($instance['count']); ?>" style="width:100%;" />
 		</p>
 	<?php

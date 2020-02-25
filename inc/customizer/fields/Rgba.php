@@ -5,15 +5,15 @@ if( !class_exists( 'WP_Customize_Control' ) ){
 	return null;
 }
 
-class blogon_Rgba_Control extends WP_Customize_Control {
+class blogen_Rgba_Control extends WP_Customize_Control {
 
 	public $type = 'rgba';
 	public $palette;
 	public $show_opacity;
 
 	public function enqueue() {
-		wp_enqueue_script( 'alpha-color-picker-js', BLOGON_URI . '/inc/customizer/assets/js/alpha-color-picker.js', array( 'jquery', 'wp-color-picker' ), BLOGON_VERSION, true );
-		wp_enqueue_style( 'alpha-color-picker-css', BLOGON_URI . '/inc/customizer/assets/css/alpha-color-picker.css', array( 'wp-color-picker' ), BLOGON_VERSION );
+		wp_enqueue_script( 'alpha-color-picker-js', BLOGEN_URI . '/inc/customizer/assets/js/alpha-color-picker.js', array( 'jquery', 'wp-color-picker' ), BLOGEN_VERSION, true );
+		wp_enqueue_style( 'alpha-color-picker-css', BLOGEN_URI . '/inc/customizer/assets/css/alpha-color-picker.css', array( 'wp-color-picker' ), BLOGEN_VERSION );
 	}
 
 	public function render_content() {

@@ -5,7 +5,7 @@ if( !class_exists( 'WP_Customize_Control' ) ){
 	return null;
 }
 
-class blogon_Layout_Control extends WP_Customize_Control {
+class blogen_Layout_Control extends WP_Customize_Control {
 
 	public $type = 'layout';
 	public $key;

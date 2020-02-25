@@ -1,70 +1,70 @@
 <?php
 
 // Call in Theme Function
-function blogon_customizer_callback($prams) {
+function blogen_customizer_callback($prams) {
 	$new_prams = array(
         array(
-            'key'     => 'blogon_options',
+            'key'     => 'blogen_options',
             'type'    => 'panel',
             'priority'=> 10,
-            'title'   => __( 'Blogon Options', 'blogon' ),
+            'title'   => __( 'Blogen Options', 'blogen' ),
             'options' => array(
 
                 array(
                     'key'    => 'logo_options',
                     'type'   => 'section',
-                    'title'  => __( 'Logo', 'blogon' ),
+                    'title'  => __( 'Logo', 'blogen' ),
 					'options'=> array(
                         array(
                             'key'     => 'logo_type',
                             'type'    => 'select',
-                            'title'   => __( 'Select Logo Type', 'blogon' ),
+                            'title'   => __( 'Select Logo Type', 'blogen' ),
                             'default' => 'logo_img',
                             'options'   => array(
-                                'logo_img'   => __('Image Logo', 'blogon'),
-                                'logo_text'  => __('Text Logo', 'blogon'),
+                                'logo_img'   => __('Image Logo', 'blogen'),
+                                'logo_text'  => __('Text Logo', 'blogen'),
                             )
                         ),
                         array(
                             'key'     => 'logo_img',
                             'type'    => 'media',
-                            'title'   => __( 'Logo', 'blogon' ),
+                            'title'   => __( 'Logo', 'blogen' ),
                             'default' => get_parent_theme_file_uri( '/assets/images/logo.png' ),
                         ),
                         array(
                             'key'     => 'offcanvas_logo_img',
                             'type'    => 'media',
-                            'title'   => __( 'offcanvas Logo', 'blogon' ),
+                            'title'   => __( 'offcanvas Logo', 'blogen' ),
                             'default' => get_parent_theme_file_uri( '/assets/images/logo.png' ),
                         ),
                         array(
                             'key'     => 'logo_text',
 							'type'    => 'text',
-                            'title'   => __( 'Logo Text', 'blogon' ),
-                            'default' => 'blogon',
+                            'title'   => __( 'Logo Text', 'blogen' ),
+                            'default' => 'blogen',
                         ),
                         array(
                             'key'     => 'logo_slogan',
 							'type'    => 'text',
-                            'title'   => __( 'Slogan Text', 'blogon' ),
+                            'title'   => __( 'Slogan Text', 'blogen' ),
                             'default' => 'Self Made Intrepreneurs',
                         ),
                         array(
                             'key'     => 'logo_width',
                             'type'    => 'number',
-                            'title'   => __( 'Logo Width', 'blogon' ),
+                            'title'   => __( 'Logo Width', 'blogen' ),
                             'default' => 140,
                         ),
                         array(
                             'key'     => 'logo_responsive_width',
                             'type'    => 'number',
-                            'title'   => __( 'Logo Responsive Width', 'blogon' ),
+                            'title'   => __( 'Logo Responsive Width', 'blogen' ),
                             'default' => 120,
                         ),
                         array(
                             'key'     => 'logo_height',
                             'type'    => 'number',
-                            'title'   => __( 'Logo Height', 'blogon' ),
+                            'title'   => __( 'Logo Height', 'blogen' ),
                             'default' => '',
                         ),
 					)
@@ -73,66 +73,66 @@ function blogon_customizer_callback($prams) {
                 array(
                     'key'    => 'header_options',
                     'type'   => 'section',
-                    'title'  => __( 'Header', 'blogon' ),
+                    'title'  => __( 'Header', 'blogen' ),
 					'options'=> array(
                         array(
                             'key'     => 'header_layout',
                             'type'    => 'layout',
-                            'title'   => __( 'Header layout', 'blogon' ),
+                            'title'   => __( 'Header layout', 'blogen' ),
                             'default' => 'one',
                             'options' => array(
-                                'one'   => BLOGON_URI.'/assets/images/header-one.png',
-                                'two'   => BLOGON_URI.'/assets/images/header-two.png',
-                                'three' => BLOGON_URI.'/assets/images/header-three.png',
-                                'four'  => BLOGON_URI.'/assets/images/header-four.png',
+                                'one'   => BLOGEN_URI.'/assets/images/header-one.png',
+                                'two'   => BLOGEN_URI.'/assets/images/header-two.png',
+                                'three' => BLOGEN_URI.'/assets/images/header-three.png',
+                                'four'  => BLOGEN_URI.'/assets/images/header-four.png',
                             ),
                             // 'depends' => 'tb_padding_bottom#=#one, tb_padding_top#=#one, email#=#one, contact_number#=#one'
                         ),
                         array(
                             'key'     => 'enable_search',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Search', 'blogon' ),
+                            'title'   => __( 'Disable Search', 'blogen' ),
                             'default' => 0,
                         ),
 						array(
                             'key'     => 'subscribe_url',
 							'type'    => 'text',
-                            'title'   => __( 'Subscribe URL', 'blogon' ),
+                            'title'   => __( 'Subscribe URL', 'blogen' ),
                             'default' => '#',
 						),
 						array(
                             'key'     => 'subscribe_text',
 							'type'    => 'text',
-                            'title'   => __( 'Subscribe Text', 'blogon' ),
-                            'default' => __('Subscribe', 'blogon' ),
+                            'title'   => __( 'Subscribe Text', 'blogen' ),
+                            'default' => __('Subscribe', 'blogen' ),
                         ),
 
                         array(
                             'key'     => 'topbar_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Topbar Options', 'blogon' ),
+                            'title'   => __( 'Topbar Options', 'blogen' ),
                         ),
                         array(
                             'key'     => 'contact_number',
 							'type'    => 'text',
-                            'title'   => __( 'Contact Number', 'blogon' ),
-                            'default' => __('(123)456 7890', 'blogon' ),
+                            'title'   => __( 'Contact Number', 'blogen' ),
+                            'default' => __('(123)456 7890', 'blogen' ),
                         ),
                         array(
                             'key'     => 'email',
 							'type'    => 'text',
-                            'title'   => __( 'Email', 'blogon' ),
+                            'title'   => __( 'Email', 'blogen' ),
                             'default' => 'demo@site.com',
                         ),
                         array(
                             'key'     => 'tb_padding_top',
-                            'title'   => __( 'Topbar Padding Top', 'blogon' ),
+                            'title'   => __( 'Topbar Padding Top', 'blogen' ),
                             'type'    => 'number',
                             'default' => 8,
                         ),
                         array(
                             'key'     => 'tb_padding_bottom',
-                            'title'   => __( 'Topbar Padding Bottom', 'blogon' ),
+                            'title'   => __( 'Topbar Padding Bottom', 'blogen' ),
                             'type'    => 'number',
                             'default' => 8,
                         ),
@@ -142,30 +142,30 @@ function blogon_customizer_callback($prams) {
                 // array(
                 //     'key'    => 'typography',
                 //     'type'   => 'section',
-                //     'title'  => __( 'Typography', 'blogon' ),
+                //     'title'  => __( 'Typography', 'blogen' ),
 				// 	'options'=> array(
                 //         array(
                 //             'key'     => 'body',
                 //             'type'    => 'typography',
-                //             'title'   => __( 'Body Font', 'blogon' ),
+                //             'title'   => __( 'Body Font', 'blogen' ),
                 //             'default' => 'Source Sans Pro#sans-serif#400',
                 //         ),
                 //         array(
                 //             'key'     => 'menu',
                 //             'type'    => 'typography',
-                //             'title'   => __( 'Menu Font', 'blogon' ),
+                //             'title'   => __( 'Menu Font', 'blogen' ),
                 //             'default' => 'Libre Baskerville#serif#400',
                 //         ),
                 //         array(
                 //             'key'     => 'submenu',
                 //             'type'    => 'typography',
-                //             'title'   => __( 'Sub Menu Font', 'blogon' ),
+                //             'title'   => __( 'Sub Menu Font', 'blogen' ),
                 //             'default' => 'Libre Baskerville#serif#400',
                 //         ),
                 //         array(
                 //             'key'     => 'heading',
                 //             'type'    => 'typography',
-                //             'title'   => __( 'Heading Font', 'blogon' ),
+                //             'title'   => __( 'Heading Font', 'blogen' ),
                 //             'default' => 'Libre Baskerville#serif#700',
                 //         ),
 				// 	)
@@ -174,41 +174,41 @@ function blogon_customizer_callback($prams) {
                 array(
                     'key'    => 'style_options',
                     'type'   => 'section',
-                    'title'  => __( 'Theme Style', 'blogon' ),
+                    'title'  => __( 'Theme Style', 'blogen' ),
 					'options'=> array(
                         // array(
                         //     'key'     => 'skin_style',
                         //     'type'    => 'select',
-                        //     'title'   => __( 'Select Skin', 'blogon' ),
+                        //     'title'   => __( 'Select Skin', 'blogen' ),
                         //     'default' => 'white',
                         //     'options'   => array(
-                        //         'white'   => __('White', 'blogon'),
-                        //         'dark'  => __('Dark', 'blogon'),
+                        //         'white'   => __('White', 'blogen'),
+                        //         'dark'  => __('Dark', 'blogen'),
                         //     )
                         // ),
                         array(
                             'key'     => 'box_layout',
                             'type'    => 'switch',
-                            'title'   => __( 'Body Box Layout', 'blogon' ),
+                            'title'   => __( 'Body Box Layout', 'blogen' ),
                             'default' => 0,
                             'depends' => 'body_bg_img#=#1'
                         ),
                         array(
                             'key'     => 'body_bg_img',
                             'type'    => 'media',
-                            'title'   => __( 'Upload Body Background', 'blogon' ),
+                            'title'   => __( 'Upload Body Background', 'blogen' ),
                             'default' => '',
                         ),
                         array(
                             'key'     => 'tc_body_color',
                             'type'    => 'color',
-                            'title'   => __( 'Body Text Color', 'blogon' ),
+                            'title'   => __( 'Body Text Color', 'blogen' ),
                             'default' => '#3f4044',
                         ),
                         array(
                             'key'     => 'tc_body_bg',
                             'type'    => 'color',
-                            'title'   => __( 'Body Background Color', 'blogon' ),
+                            'title'   => __( 'Body Background Color', 'blogen' ),
                             'default' => '#ffffff',
                         ),
 
@@ -216,23 +216,23 @@ function blogon_customizer_callback($prams) {
                         array(
                             'key'     => 'topbar_style_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Topbar Style', 'blogon' ),
+                            'title'   => __( 'Topbar Style', 'blogen' ),
                         ),
                         array(
                             'key'     => 'tb_color',
-                            'title'   => __( 'Topbar Text Color', 'blogon' ),
+                            'title'   => __( 'Topbar Text Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '',
                         ),
                         array(
                             'key'     => 'tb_link_hover_color',
-                            'title'   => __( 'Topbar Link Hover Color', 'blogon' ),
+                            'title'   => __( 'Topbar Link Hover Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '#FD4145',
                         ),
                         array(
                             'key'     => 'tb_bg_color',
-                            'title'   => __( 'Topbar Background Color', 'blogon' ),
+                            'title'   => __( 'Topbar Background Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '',
                         ),
@@ -241,17 +241,17 @@ function blogon_customizer_callback($prams) {
                         array(
                             'key'     => 'header_style_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Header Style', 'blogon' ),
+                            'title'   => __( 'Header Style', 'blogen' ),
                         ),
                         array(
                             'key'     => 'ht_color',
-                            'title'   => __( 'Header Text Color', 'blogon' ),
+                            'title'   => __( 'Header Text Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '',
                         ),
                         array(
                             'key'     => 'header_bg_color',
-                            'title'   => __( 'Header Background Color', 'blogon' ),
+                            'title'   => __( 'Header Background Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '',
                         ),
@@ -260,30 +260,30 @@ function blogon_customizer_callback($prams) {
                         array(
                             'key'     => 'menu_style_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Menu Style', 'blogon' ),
+                            'title'   => __( 'Menu Style', 'blogen' ),
                         ),
                         array(
                             'key'     => 'tc_menu_color',
                             'type'    => 'color',
-                            'title'   => __( 'Menu Color', 'blogon' ),
+                            'title'   => __( 'Menu Color', 'blogen' ),
                             'default' => '',
                         ),
                         array(
                             'key'     => 'tc_menu_hover_color',
                             'type'    => 'color',
-                            'title'   => __( 'Menu Hover Color', 'blogon' ),
+                            'title'   => __( 'Menu Hover Color', 'blogen' ),
                             'default' => '#FD4145',
                         ),
                         array(
                             'key'     => 'tc_submenu_color',
                             'type'    => 'color',
-                            'title'   => __( 'Sub Menu Text Color', 'blogon' ),
+                            'title'   => __( 'Sub Menu Text Color', 'blogen' ),
                             'default' => '#000',
                         ),
                         array(
                             'key'     => 'tc_submenu_hover_color',
                             'type'    => 'color',
-                            'title'   => __( 'Sub Menu Hover Color', 'blogon' ),
+                            'title'   => __( 'Sub Menu Hover Color', 'blogen' ),
                             'default' => '#FD4145',
                         ),
 
@@ -291,43 +291,43 @@ function blogon_customizer_callback($prams) {
                         array(
                             'key'     => 'tc_primary_color',
                             'type'    => 'color',
-                            'title'   => __( 'Primary Color', 'blogon' ),
+                            'title'   => __( 'Primary Color', 'blogen' ),
                             'default' => '#FD4145',
                         ),
                         array(
                             'key'     => 'tc_secendary_color',
                             'type'    => 'color',
-                            'title'   => __( 'Secendary Color', 'blogon' ),
+                            'title'   => __( 'Secendary Color', 'blogen' ),
                             'default' => '#E4282C',
                         ),
                         //button
                         array(
                             'key'     => 'button_style_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Button Style', 'blogon' ),
+                            'title'   => __( 'Button Style', 'blogen' ),
                         ),
                         array(
                             'key'     => 'tc_btn_color',
                             'type'    => 'color',
-                            'title'   => __( 'Button Color', 'blogon' ),
+                            'title'   => __( 'Button Color', 'blogen' ),
                             'default' => '#ffffff',
                         ),
                         array(
                             'key'     => 'tc_btn_hover_color',
                             'type'    => 'color',
-                            'title'   => __( 'Button Hover Color', 'blogon' ),
+                            'title'   => __( 'Button Hover Color', 'blogen' ),
                             'default' => '#ffffff',
                         ),
                         array(
                             'key'     => 'tc_btn_bgcolor',
                             'type'    => 'color',
-                            'title'   => __( 'Button background Color', 'blogon' ),
+                            'title'   => __( 'Button background Color', 'blogen' ),
                             'default' => '#FD4145',
                         ),
                         array(
                             'key'     => 'tc_btn_bg_hover_color',
                             'type'    => 'color',
-                            'title'   => __( 'Button Background Hover Color', 'blogon' ),
+                            'title'   => __( 'Button Background Hover Color', 'blogen' ),
                             'default' => '#000000',
                         ),
 
@@ -335,23 +335,23 @@ function blogon_customizer_callback($prams) {
                         array(
                             'key'     => 'footer_top_style_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Footer Top Style', 'blogon' ),
+                            'title'   => __( 'Footer Top Style', 'blogen' ),
                         ),
                         array(
                             'key'     => 'ft_color',
-                            'title'   => __( 'Text Color', 'blogon' ),
+                            'title'   => __( 'Text Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '#000',
                         ),
                         array(
                             'key'     => 'ft_bg_color',
-                            'title'   => __( 'Background Color', 'blogon' ),
+                            'title'   => __( 'Background Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '#ffffff',
                         ),
                         array(
                             'key'     => 'ft_link_hover_color',
-                            'title'   => __( 'Link Hover Color', 'blogon' ),
+                            'title'   => __( 'Link Hover Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '#FD4145',
                         ),
@@ -360,23 +360,23 @@ function blogon_customizer_callback($prams) {
                         array(
                             'key'     => 'footer_bottom_style_separator',
                             'type'    => 'separator',
-                            'title'   => __( 'Footer Bottom Style', 'blogon' ),
+                            'title'   => __( 'Footer Bottom Style', 'blogen' ),
                         ),
                         array(
                             'key'     => 'fb_color',
                             'type'    => 'color',
-                            'title'   => __( 'Text Color', 'blogon' ),
+                            'title'   => __( 'Text Color', 'blogen' ),
                             'default' => '#596172',
                         ),
                         array(
                             'key'     => 'fb_link_hover_color',
-                            'title'   => __( 'Link Hover Color', 'blogon' ),
+                            'title'   => __( 'Link Hover Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '#FD4145',
                         ),
                         array(
                             'key'     => 'fb_bg_color',
-                            'title'   => __( 'Background Color', 'blogon' ),
+                            'title'   => __( 'Background Color', 'blogen' ),
                             'type'    => 'color',
                             'default' => '#ffffff',
                         ),
@@ -387,12 +387,12 @@ function blogon_customizer_callback($prams) {
                 array(
                     'key'    => 'latest_post_options',
                     'type'   => 'section',
-                    'title'  => __( 'Latest Post Grid', 'blogon' ),
+                    'title'  => __( 'Latest Post Grid', 'blogen' ),
 					'options'=> array(
                         array(
                             'key'     => 'enable_post_grid',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Post Grid', 'blogon' ),
+                            'title'   => __( 'Disable Post Grid', 'blogen' ),
                             'default' => 1,
                         ),
 					)
@@ -401,65 +401,65 @@ function blogon_customizer_callback($prams) {
                 array(    
                     'key'    => 'archive_options',
                     'type'   => 'section',
-                    'title'  => __( 'Archive Options', 'blogon' ),
+                    'title'  => __( 'Archive Options', 'blogen' ),
                     'options'=> array(
                         array(
                             'key'     => 'archive_layout',
                             'type'    => 'select',
-                            'title'   => __( 'Archive Layout', 'blogon' ),
+                            'title'   => __( 'Archive Layout', 'blogen' ),
                             'default' => 'right',
                             'options'   => array(
-                                'full'   => __('Full Width', 'blogon'),
-                                'right'  => __('Right Sidebar', 'blogon'),
-                                'left'  => __('left Sidebar', 'blogon'),
+                                'full'   => __('Full Width', 'blogen'),
+                                'right'  => __('Right Sidebar', 'blogen'),
+                                'left'  => __('left Sidebar', 'blogen'),
                             )
                         ),
                         array(
                             'key'     => 'blog_post_column',
                             'type'    => 'select',
-                            'title'   => __( 'Archive Column', 'blogon' ),
+                            'title'   => __( 'Archive Column', 'blogen' ),
                             'default' => '1',
                             'options'   => array(
-                                '1'   => __('1', 'blogon'),
-                                '2'  => __('2', 'blogon'),
-                                '3'  => __('3', 'blogon'),
+                                '1'   => __('1', 'blogen'),
+                                '2'  => __('2', 'blogen'),
+                                '3'  => __('3', 'blogen'),
                             )
                         ),
                         array(
                             'key'     => 'enable_author',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Author', 'blogon' ),
+                            'title'   => __( 'Disable Author', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_date',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Date', 'blogon' ),
+                            'title'   => __( 'Disable Date', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_excerpt',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Excerpt', 'blogon' ),
+                            'title'   => __( 'Disable Excerpt', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'character_limit',
                             'type'    => 'text',
-                            'title'   => __( 'Characher Limit', 'blogon' ),
+                            'title'   => __( 'Characher Limit', 'blogen' ),
                             'default' => 100,
                         ),
                         array(
                             'key'     => 'enable_readmore',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Read More', 'blogon' ),
+                            'title'   => __( 'Disable Read More', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'readmore_text',
                             'type'    => 'text',
-                            'title'   => __( 'Read More Text', 'blogon' ),
-                            'default' => __( 'Read More', 'blogon' ),
+                            'title'   => __( 'Read More Text', 'blogen' ),
+                            'default' => __( 'Read More', 'blogen' ),
                         ),
                     )
                 ),
@@ -467,59 +467,59 @@ function blogon_customizer_callback($prams) {
                 array(    
                     'key'    => 'single_options',
                     'type'   => 'section',
-                    'title'  => __( 'Single Options', 'blogon' ),
+                    'title'  => __( 'Single Options', 'blogen' ),
                     'options'=> array(
                         array(
                             'key'     => 'single_layout',
                             'type'    => 'select',
-                            'title'   => __( 'Single Layout', 'blogon' ),
+                            'title'   => __( 'Single Layout', 'blogen' ),
                             'default' => 'full',
                             'options'   => array(
-                                'full'   => __('Full Width', 'blogon'),
-                                'right'  => __('Right Sidebar', 'blogon'),
-                                'left'  => __('left Sidebar', 'blogon'),
+                                'full'   => __('Full Width', 'blogen'),
+                                'right'  => __('Right Sidebar', 'blogen'),
+                                'left'  => __('left Sidebar', 'blogen'),
                             )
                         ),
                         array(
                             'key'     => 'enable_single_author',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single Author', 'blogon' ),
+                            'title'   => __( 'Disable Single Author', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_single_date',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single Date', 'blogon' ),
+                            'title'   => __( 'Disable Single Date', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_single_view',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single View', 'blogon' ),
+                            'title'   => __( 'Disable Single View', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_single_comment_count',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single Comment Count', 'blogon' ),
+                            'title'   => __( 'Disable Single Comment Count', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_single_tag',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single Tags', 'blogon' ),
+                            'title'   => __( 'Disable Single Tags', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_single_nav',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single Navigation', 'blogon' ),
+                            'title'   => __( 'Disable Single Navigation', 'blogen' ),
                             'default' => 1,
                         ),
                         array(
                             'key'     => 'enable_single_comment',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Single Comment', 'blogon' ),
+                            'title'   => __( 'Disable Single Comment', 'blogen' ),
                             'default' => 1,
                         ),
                     )
@@ -528,30 +528,30 @@ function blogon_customizer_callback($prams) {
                 array(
                     'key'    => 'footer_top',
                     'type'   => 'section',
-                    'title'  => __( 'Footer Top', 'blogon' ),
+                    'title'  => __( 'Footer Top', 'blogen' ),
 					'options'=> array(
                         array(
                             'key'     => 'ft_column',
-                            'title'   => __( 'Footer Column', 'blogon' ),
+                            'title'   => __( 'Footer Column', 'blogen' ),
                             'type'    => 'select',
-                            'title'   => __( 'Select Column', 'blogon' ),
+                            'title'   => __( 'Select Column', 'blogen' ),
                             'default' => '4',
                             'options'   => array(
-                                '12'   => __('1', 'blogon'),
-                                '6'  => __('2', 'blogon'),
-                                '4'  => __('3', 'blogon'),
-                                '3'  => __('4', 'blogon'),
+                                '12'   => __('1', 'blogen'),
+                                '6'  => __('2', 'blogen'),
+                                '4'  => __('3', 'blogen'),
+                                '3'  => __('4', 'blogen'),
                             )
                         ),
                         array(
                             'key'     => 'ft_padding_top',
-                            'title'   => __( 'Padding Top', 'blogon' ),
+                            'title'   => __( 'Padding Top', 'blogen' ),
                             'type'    => 'number',
                             'default' => 80,
                         ),
                         array(
                             'key'     => 'ft_padding_bottom',
-                            'title'   => __( 'Padding Bottom', 'blogon' ),
+                            'title'   => __( 'Padding Bottom', 'blogen' ),
                             'type'    => 'number',
                             'default' => 80,
                         ),
@@ -561,46 +561,46 @@ function blogon_customizer_callback($prams) {
                 array(
                     'key'    => 'footer_bottom',
                     'type'   => 'section',
-                    'title'  => __( 'Footer Bottom', 'blogon' ),
+                    'title'  => __( 'Footer Bottom', 'blogen' ),
 					'options'=> array(
                         array(
                             'key'     => 'footer_layout',
                             'type'    => 'layout',
-                            'title'   => __( 'Footer layout', 'blogon' ),
+                            'title'   => __( 'Footer layout', 'blogen' ),
                             'default' => 'ftone',
                             'options' => array(
-                                'ftone'   => BLOGON_URI.'/assets/images/footer-one.png',
-                                'fttwo'   => BLOGON_URI.'/assets/images/footer-two.png',
+                                'ftone'   => BLOGEN_URI.'/assets/images/footer-one.png',
+                                'fttwo'   => BLOGEN_URI.'/assets/images/footer-two.png',
                             ),
                         ),
                         array(
                             'key'     => 'fb_padding_top',
-                            'title'   => __( 'Padding Top', 'blogon' ),
+                            'title'   => __( 'Padding Top', 'blogen' ),
                             'type'    => 'number',
                             'default' => 80,
                         ),
                         array(
                             'key'     => 'fb_padding_bottom',
-                            'title'   => __( 'Padding Bottom', 'blogon' ),
+                            'title'   => __( 'Padding Bottom', 'blogen' ),
                             'type'    => 'number',
                             'default' => 80,
                         ),
                         array(
                             'key'     => 'footer_logo',
                             'type'    => 'media',
-                            'title'   => __( 'Footer Logo', 'blogon' ),
+                            'title'   => __( 'Footer Logo', 'blogen' ),
                             'default' => get_parent_theme_file_uri( '/assets/images/footer-logo.png' ),
                         ),
                         array(
                             'key'     => 'copyright',
 							'type'    => 'textarea',
-                            'title'   => __( 'Facebook URL', 'blogon' ),
-                            'default' => sprintf( __('Created by %1$sWPXPO%2$s. Powered by %3$sWordPress%4$s Code is Poetry.', 'blogon'), '<strong>', '</strong>', '<strong>', '</strong>' ),
+                            'title'   => __( 'Facebook URL', 'blogen' ),
+                            'default' => sprintf( __('Created by %1$sWPXPO%2$s. Powered by %3$sWordPress%4$s Code is Poetry.', 'blogen'), '<strong>', '</strong>', '<strong>', '</strong>' ),
                         ),
                         array(
                             'key'     => 'enable_footer_share',
                             'type'    => 'switch',
-                            'title'   => __( 'Disable Social Button', 'blogon' ),
+                            'title'   => __( 'Disable Social Button', 'blogen' ),
                             'default' => 1,
                         ),
 					)
@@ -609,30 +609,30 @@ function blogon_customizer_callback($prams) {
                 array(
                     'key'    => 'social_share_options',
                     'type'   => 'section',
-                    'title'  => __( 'Social Share', 'blogon' ),
+                    'title'  => __( 'Social Share', 'blogen' ),
 					'options'=> array(
 						array(
                             'key'     => 'link_facebook',
 							'type'    => 'text',
-                            'title'   => __( 'Facebook URL', 'blogon' ),
+                            'title'   => __( 'Facebook URL', 'blogen' ),
                             'default' => '#',
                         ),
                         array(
                             'key'     => 'link_instagram',
 							'type'    => 'text',
-                            'title'   => __( 'Instagram URL', 'blogon' ),
+                            'title'   => __( 'Instagram URL', 'blogen' ),
                             'default' => '#',
                         ),
 						array(
                             'key'     => 'link_twitter',
 							'type'    => 'text',
-                            'title'   => __( 'Twitter URL', 'blogon' ),
+                            'title'   => __( 'Twitter URL', 'blogen' ),
                             'default' => '#',
                         ),
 						array(
                             'key'     => 'link_linkedin',
 							'type'    => 'text',
-                            'title'   => __( 'Linkedin URL', 'blogon' ),
+                            'title'   => __( 'Linkedin URL', 'blogen' ),
                             'default' => '',
                         ),
 					)
@@ -643,4 +643,4 @@ function blogon_customizer_callback($prams) {
     );
 	return array_merge($new_prams, $prams);
 }
-add_filter('blogon_customizer', 'blogon_customizer_callback'); 
+add_filter('blogen_customizer', 'blogen_customizer_callback'); 

@@ -1,4 +1,4 @@
-<?php $blogon_enable_search = get_theme_mod( 'enable_search', 1 ); ?>
+<?php $blogen_enable_search = get_theme_mod( 'enable_search', 1 ); ?>
 <header id="masthead" class="site-header mainsite-header-three">
     <div class="mainsite-header-wrap d-none d-lg-block">
         <div class="container">
@@ -10,7 +10,7 @@
                     <?php get_template_part( 'template-parts/logo' );?>
                 </div><!-- .site-branding -->
                 <div class="mainsite-social-icon mainsite-flex-col">
-                    <?php if($blogon_enable_search) { ?>
+                    <?php if($blogen_enable_search) { ?>
                         <?php get_template_part( 'template-parts/header-search' ); ?>
                     <?php } ?>
                 </div>
@@ -27,7 +27,7 @@
         </div><!-- .container --> 
     </div><!-- .main-navigation-wrap --> 
     <?php get_template_part( 'template-parts/responsive-header' );?>
-	<?php if($blogon_enable_search) { ?>
+	<?php if($blogen_enable_search) { ?>
 		<div class="mainsite-header-search" style="display: none;">
 			<div class="mainsite-header-search-wrap">
 				<?php echo get_search_form();?>

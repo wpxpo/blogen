@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Blogon
+ * @package Blogen
  */
 
 /*
@@ -27,16 +27,16 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-			$blogon_comment_count = get_comments_number();
-			if ( '1' === $blogon_comment_count ) {
+			$blogen_comment_count = get_comments_number();
+			if ( '1' === $blogen_comment_count ) {
 				printf(
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'blogon' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'blogen' ),
 					'<span>' . esc_url(get_the_title()) . '</span>'
 				);
 			} else {
 				printf(
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $blogon_comment_count, 'comments title', 'blogon' ) ),
-					number_format_i18n( $blogon_comment_count ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $blogen_comment_count, 'comments title', 'blogen' ) ),
+					number_format_i18n( $blogen_comment_count ),
 					'<span>' . esc_url(get_the_title()) . '</span>'
 				);
 			}
@@ -49,15 +49,15 @@ if ( post_password_required() ) {
                 'avatar_size' => 100,
                 'style'       => 'ol',
                 'short_ping'  => true,
-                'callback'		=> 'blogon_comments',
-                'reply_text'  => esc_html__( 'Reply', 'blogon' ),
+                'callback'		=> 'blogen_comments',
+                'reply_text'  => esc_html__( 'Reply', 'blogen' ),
 			) );
 			?>
 		</ol><!-- .comment-list -->
 		<?php the_comments_navigation();
 		if ( ! comments_open() ) :
 			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'blogon' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'blogen' ); ?></p>
 			<?php
 		endif;
 	endif; // Check for have_comments().

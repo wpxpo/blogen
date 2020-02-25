@@ -1,4 +1,4 @@
-=== Blogon ===
+=== Blogen ===
 
 Contributors: wpxpo
 Tags: blog, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
@@ -8,13 +8,13 @@ Requires PHP: 5.6.0
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 
-A starter theme called Blogon.
+A starter theme called Blogen.
 
 == Description ==
 
 Responsive WordPress Blog Magazine Theme
 
-Blogon is a modern and flexible multipurpose blog WordPress theme. That can help you to create amazing website like personal blog, blogging, blogger, journal, lifestyle, magazine, photography, editorial, traveler and so on. Rich customizer options can help you to empower your site customization. Well optimize CSS and perfectly positioned rich snippet make this theme responsive and SEO friedly. It’s perfect for you to create a blogging site without any concern.
+Blogen is a modern and flexible multipurpose blog WordPress theme. That can help you to create amazing website like personal blog, blogging, blogger, journal, lifestyle, magazine, photography, editorial, traveler and so on. Rich customizer options can help you to empower your site customization. Well optimize CSS and perfectly positioned rich snippet make this theme responsive and SEO friedly. It’s perfect for you to create a blogging site without any concern.
 
 
 == Installation ==
@@ -27,7 +27,7 @@ Blogon is a modern and flexible multipurpose blog WordPress theme. That can help
 
 = Does this theme support any plugins? =
 
-Blogon includes support all of the plugin of WordPress directory.
+Blogen includes support all of the plugin of WordPress directory.
 
 == Changelog ==
 
@@ -36,8 +36,8 @@ Blogon includes support all of the plugin of WordPress directory.
 
 == Copyright ==
 
-Blogon WordPress Theme, Copyright (C) 2020, wpxpo
-Blogon is distributed under the terms of the GNU GPL.
+Blogen WordPress Theme, Copyright (C) 2020, wpxpo
+Blogen is distributed under the terms of the GNU GPL.
 
 == Credits ==
 

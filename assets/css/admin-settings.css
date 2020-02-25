@@ -53,17 +53,17 @@ body.wp-admin{
     line-height: 26px;
 }
 
-#accordion-panel-blogon_options .accordion-section-title {
+#accordion-panel-blogen_options .accordion-section-title {
     background: #fd4145;
     color: #fff;
     border-left: 4px solid #fd4145;
 }
-#customize-controls #accordion-panel-blogon_options .accordion-section-title:hover,
-#customize-controls #accordion-panel-blogon_options .accordion-section-title:focus {
+#customize-controls #accordion-panel-blogen_options .accordion-section-title:hover,
+#customize-controls #accordion-panel-blogen_options .accordion-section-title:focus {
     background: #dc2b2f;
     color: #fff;
     border-left: 4px solid #dc2b2f;
 }
-#customize-theme-controls #accordion-panel-blogon_options .accordion-section-title:after {
+#customize-theme-controls #accordion-panel-blogen_options .accordion-section-title:after {
     color: #fff;
 }

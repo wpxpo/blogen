@@ -1,24 +1,24 @@
 <?php
 defined('ABSPATH') || exit;
 
-if (!class_exists('blogon_Metabox')) {
-    class blogon_Metabox{
+if (!class_exists('blogen_Metabox')) {
+    class blogen_Metabox{
 
         public function __construct(){
-            add_action('add_meta_boxes',    array($this, 'blogon_metabox_init'));
-            add_action('save_post',         array($this, 'blogon_metabox_settings_save_callback'), 10, 2);
-            add_filter('blogon_metabox',    array($this, 'blogon_metabox_callback')); 
+            add_action('add_meta_boxes',    array($this, 'blogen_metabox_init'));
+            add_action('save_post',         array($this, 'blogen_metabox_settings_save_callback'), 10, 2);
+            add_filter('blogen_metabox',    array($this, 'blogen_metabox_callback')); 
         }
 
-        public function blogon_metabox_init() {
-            add_meta_box('mainsite-single-metabox', esc_html__( 'Blogon Settings', 'blogon' ), array($this, 'blogon_settings_metabox_callback'), 'page', 'side', 'default');
+        public function blogen_metabox_init() {
+            add_meta_box('mainsite-single-metabox', esc_html__( 'Blogen Settings', 'blogen' ), array($this, 'blogen_settings_metabox_callback'), 'page', 'side', 'default');
         }
 
-        public function blogon_settings_metabox_callback( $post ) {
+        public function blogen_settings_metabox_callback( $post ) {
             
-            wp_nonce_field( basename( __FILE__ ), 'blogon_nonce' ); 
+            wp_nonce_field( basename( __FILE__ ), 'blogen_nonce' ); 
             
-            $prams = apply_filters( 'blogon_metabox', array() );
+            $prams = apply_filters( 'blogen_metabox', array() );
             if (is_array($prams) && !empty($prams)) {
                 foreach ($prams as $settings) {
                     $val = '';
@@ -62,15 +62,15 @@ if (!class_exists('blogon_Metabox')) {
         }
 
 
-        public function blogon_metabox_settings_save_callback( $post_id, $post ) {
-            if ( !isset( $_POST['blogon_nonce'] ) || !wp_verify_nonce( $_POST['blogon_nonce'], basename( __FILE__ ) ) ){
+        public function blogen_metabox_settings_save_callback( $post_id, $post ) {
+            if ( !isset( $_POST['blogen_nonce'] ) || !wp_verify_nonce( $_POST['blogen_nonce'], basename( __FILE__ ) ) ){
                 return $post_id;
             }
             $post_type = get_post_type_object( $post->post_type );
             if ( !current_user_can( $post_type->cap->edit_post, $post_id ) ){
                 return $post_id;
             }
-            $prams = apply_filters( 'blogon_metabox', array() );
+            $prams = apply_filters( 'blogen_metabox', array() );
             if (is_array($prams) && !empty($prams)) {
                 foreach ($prams as $settings) {
                     if (isset($settings['key'])) {
@@ -90,22 +90,22 @@ if (!class_exists('blogon_Metabox')) {
 
 
         // Settings Of Single Page
-        public function blogon_metabox_callback($arr) {
+        public function blogen_metabox_callback($arr) {
             $new_arr = array(
                 array(
                     'type' => 'separator',
-                    'label' => esc_html__('Disable Sections', 'blogon'),
+                    'label' => esc_html__('Disable Sections', 'blogen'),
                 ),
                 array(
                     'key' => 'disable_page_title',
                     'type' => 'checkbox',
-                    'label' => esc_html__('Disable Page Title', 'blogon'),
+                    'label' => esc_html__('Disable Page Title', 'blogen'),
                     'default' => 0
                 ),
                 // array(
-                //     'key' => 'blogon_select_1',
+                //     'key' => 'blogen_select_1',
                 //     'type' => 'select',
-                //     'label' => esc_html__('Select 1', 'blogon'),
+                //     'label' => esc_html__('Select 1', 'blogen'),
                 //     'options' => array(
                 //         'value1' => 'Label Value 1',
                 //         'value2' => 'Label Value 2',
@@ -119,7 +119,7 @@ if (!class_exists('blogon_Metabox')) {
 
 
     }
-    new blogon_Metabox();
+    new blogen_Metabox();
 }
 
 

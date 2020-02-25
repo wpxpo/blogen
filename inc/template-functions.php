@@ -1,8 +1,8 @@
 <?php
 
 // Customizer CSS
-if(!function_exists('blogon_css_generator')){
-    function blogon_css_generator(){
+if(!function_exists('blogen_css_generator')){
+    function blogen_css_generator(){
         $output = '';
 
         // "Header"
@@ -131,11 +131,11 @@ if(!function_exists('blogon_css_generator')){
 }
 
 //theme setup
-if ( ! function_exists( 'blogon_setup' ) ) :
-	function blogon_setup() {
+if ( ! function_exists( 'blogen_setup' ) ) :
+	function blogen_setup() {
         
         //add language string
-		load_theme_textdomain( 'blogon', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'blogen', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -145,9 +145,9 @@ if ( ! function_exists( 'blogon_setup' ) ) :
 		// Registe wp_nav_menu
         register_nav_menus(
             array(
-                'primary' => __( 'Primary Menu', 'blogon' ),
-                'topbar-menu' => __( 'Topbar Menu', 'blogon' ),
-                'footer-menu' => __( 'Footer Menu', 'blogon' )
+                'primary' => __( 'Primary Menu', 'blogen' ),
+                'topbar-menu' => __( 'Topbar Menu', 'blogen' ),
+                'footer-menu' => __( 'Footer Menu', 'blogen' )
             )
         );
         
@@ -166,7 +166,7 @@ if ( ! function_exists( 'blogon_setup' ) ) :
             'width'            => 1920,
             'height'           => 380,
             'flex-height'      => true,
-            'wp-head-callback' => 'blogon_header_style',
+            'wp-head-callback' => 'blogen_header_style',
         ));
 
         # Set up the WordPress core custom background feature.
@@ -187,57 +187,57 @@ if ( ! function_exists( 'blogon_setup' ) ) :
         // Gutenberg support
         add_theme_support( 'editor-color-palette', array(
             array(
-            'name' => esc_html__( 'Tan', 'blogon' ),
+            'name' => esc_html__( 'Tan', 'blogen' ),
             'slug' => 'tan',
             'color' => '#D2B48C',
             ),
             array(
-                'name' => esc_html__( 'Yellow', 'blogon' ),
+                'name' => esc_html__( 'Yellow', 'blogen' ),
                 'slug' => 'yellow',
                 'color' => '#FDE64B',
             ),
             array(
-                'name' => esc_html__( 'Orange', 'blogon' ),
+                'name' => esc_html__( 'Orange', 'blogen' ),
                 'slug' => 'orange',
                 'color' => '#ED7014',
             ),
             array(
-                'name' => esc_html__( 'Red', 'blogon' ),
+                'name' => esc_html__( 'Red', 'blogen' ),
                 'slug' => 'red',
                 'color' => '#D0312D',
             ),
             array(
-                'name' => esc_html__( 'Pink', 'blogon' ),
+                'name' => esc_html__( 'Pink', 'blogen' ),
                 'slug' => 'pink',
                 'color' => '#b565a7',
             ),
             array(
-                'name' => esc_html__( 'Purple', 'blogon' ),
+                'name' => esc_html__( 'Purple', 'blogen' ),
                 'slug' => 'purple',
                 'color' => '#A32CC4',
             ),
             array(
-                'name' => esc_html__( 'Blue', 'blogon' ),
+                'name' => esc_html__( 'Blue', 'blogen' ),
                 'slug' => 'blue',
                 'color' => '#4E97D8',
             ),
             array(
-                'name' => esc_html__( 'Green', 'blogon' ),
+                'name' => esc_html__( 'Green', 'blogen' ),
                 'slug' => 'green',
                 'color' => '#00B294',
             ),
             array(
-                'name' => esc_html__( 'Brown', 'blogon' ),
+                'name' => esc_html__( 'Brown', 'blogen' ),
                 'slug' => 'brown',
                 'color' => '#231709',
             ),
             array(
-                'name' => esc_html__( 'Grey', 'blogon' ),
+                'name' => esc_html__( 'Grey', 'blogen' ),
                 'slug' => 'grey',
                 'color' => '#7D7D7D',
             ),
             array(
-                'name' => esc_html__( 'Black', 'blogon' ),
+                'name' => esc_html__( 'Black', 'blogen' ),
                 'slug' => 'black',
                 'color' => '#000000',
             ),
@@ -245,46 +245,46 @@ if ( ! function_exists( 'blogon_setup' ) ) :
         
         add_theme_support( 'editor-font-sizes', array(
             array(
-                'name' => esc_html__( 'small', 'blogon' ),
-                'shortName' => esc_html__( 'S', 'blogon' ),
+                'name' => esc_html__( 'small', 'blogen' ),
+                'shortName' => esc_html__( 'S', 'blogen' ),
                 'size' => 12,
                 'slug' => 'small'
             ),
             array(
-                'name' => esc_html__( 'regular', 'blogon' ),
-                'shortName' => esc_html__( 'M', 'blogon' ),
+                'name' => esc_html__( 'regular', 'blogen' ),
+                'shortName' => esc_html__( 'M', 'blogen' ),
                 'size' => 16,
                 'slug' => 'regular'
             ),
             array(
-                'name' => esc_html__( 'larger', 'blogon' ),
-                'shortName' => esc_html__( 'L', 'blogon' ),
+                'name' => esc_html__( 'larger', 'blogen' ),
+                'shortName' => esc_html__( 'L', 'blogen' ),
                 'size' => 36,
                 'slug' => 'larger'
             ),
             array(
-                'name' => esc_html__( 'huge', 'blogon' ),
-                'shortName' => esc_html__( 'XL', 'blogon' ),
+                'name' => esc_html__( 'huge', 'blogen' ),
+                'shortName' => esc_html__( 'XL', 'blogen' ),
                 'size' => 48,
                 'slug' => 'huge'
             )
         ));
         
-        add_image_size( 'blogon-1140-600', 1140, 600, true );
+        add_image_size( 'blogen-1140-600', 1140, 600, true );
 	}
 endif;
-add_action( 'after_setup_theme', 'blogon_setup' );
+add_action( 'after_setup_theme', 'blogen_setup' );
 
-function blogon_content_width() {
+function blogen_content_width() {
     global $content_width;
-	$GLOBALS['content_width'] = apply_filters( 'blogon_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'blogen_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'blogon_content_width', 0 );
+add_action( 'after_setup_theme', 'blogen_content_width', 0 );
 
 
 //header style
-if( ! function_exists( 'blogon_header_style' ) ):
-    function blogon_header_style(){
+if( ! function_exists( 'blogen_header_style' ) ):
+    function blogen_header_style(){
         $header_text_color = get_header_textcolor();
         if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
             return;
@@ -303,11 +303,11 @@ endif;
 /**
 * Register widget area.
 */
-function blogon_widgets_init() {
+function blogen_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'blogon' ),
+		'name'          => esc_html__( 'Sidebar', 'blogen' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'blogon' ),
+		'description'   => esc_html__( 'Add widgets here.', 'blogen' ),
 		'before_widget' => '<div id="%1$s" class="mainsite-widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="mainsite-widget-title">',
@@ -315,9 +315,9 @@ function blogon_widgets_init() {
     ) );
 
     register_sidebar( array(
-		'name'          => esc_html__( 'Offcanvas', 'blogon' ),
+		'name'          => esc_html__( 'Offcanvas', 'blogen' ),
 		'id'            => 'offcanavs-1',
-		'description'   => esc_html__( 'Add widgets here.', 'blogon' ),
+		'description'   => esc_html__( 'Add widgets here.', 'blogen' ),
 		'before_widget' => '<div id="%1$s" class="mainsite-widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="mainsite-widget-title">',
@@ -326,9 +326,9 @@ function blogon_widgets_init() {
     
     for( $i = 1; $i <= 4; $i++ ){
 		register_sidebar( array(
-			'name'          => esc_html__( 'Footer', 'blogon' ) . $i,
+			'name'          => esc_html__( 'Footer', 'blogen' ) . $i,
 			'id'            => 'mainsite-footer-sidebar-' . $i,
-			'description'   => esc_html__( 'Add widgets here.', 'blogon' ),
+			'description'   => esc_html__( 'Add widgets here.', 'blogen' ),
 			'before_widget' => '<div id="%1$s" class="mainsite-widget %2$s"><div class="footer-item">',
 			'after_widget'  => '</div></div>',
 			'before_title'  => '<h2 class="mainsite-widget-title">',
@@ -336,41 +336,41 @@ function blogon_widgets_init() {
 		) );
 	}
 }
-add_action( 'widgets_init', 'blogon_widgets_init' );
+add_action( 'widgets_init', 'blogen_widgets_init' );
 
 /**
 * Enqueue scripts and styles for Frontend.
 */
-function blogon_scripts() {
-    wp_enqueue_style( 'blogon-google-font-style', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900', false );
-    wp_enqueue_style( 'blogon-grid', BLOGON_URI . '/assets/css/grid.css', null, 'all' );
-    wp_enqueue_style( 'blogon-cbfont', BLOGON_URI . '/assets/css/cbfont.css', null, 'all' );
-    wp_enqueue_style( 'blogon-blocks-styles', BLOGON_URI . '/assets/css/blocks.css', null, 'all' );
-    wp_enqueue_style( 'blogon-style', get_stylesheet_uri() );
+function blogen_scripts() {
+    wp_enqueue_style( 'blogen-google-font-style', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900', false );
+    wp_enqueue_style( 'blogen-grid', BLOGEN_URI . '/assets/css/grid.css', null, 'all' );
+    wp_enqueue_style( 'blogen-cbfont', BLOGEN_URI . '/assets/css/cbfont.css', null, 'all' );
+    wp_enqueue_style( 'blogen-blocks-styles', BLOGEN_URI . '/assets/css/blocks.css', null, 'all' );
+    wp_enqueue_style( 'blogen-style', get_stylesheet_uri() );
 
     if ( has_nav_menu( 'primary' ) ) {
-        wp_enqueue_script( 'blogon-navigation', BLOGON_URI . '/assets/js/navigation.js', array(), BLOGON_VERSION, true );
+        wp_enqueue_script( 'blogen-navigation', BLOGEN_URI . '/assets/js/navigation.js', array(), BLOGEN_VERSION, true );
 	}
-    wp_enqueue_script( 'blogon-main', BLOGON_URI . '/assets/js/main.js', array('jquery'), BLOGON_VERSION, true );
+    wp_enqueue_script( 'blogen-main', BLOGEN_URI . '/assets/js/main.js', array('jquery'), BLOGEN_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
     }
-    wp_add_inline_style( 'blogon-style', blogon_css_generator() );
+    wp_add_inline_style( 'blogen-style', blogen_css_generator() );
 }
-add_action( 'wp_enqueue_scripts', 'blogon_scripts' );
+add_action( 'wp_enqueue_scripts', 'blogen_scripts' );
 
 /**
 * Enqueue scripts and styles for Editor.
 */
-function blogon_scripts_editor() {
-    wp_enqueue_style( 'blogon-google-font-style', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900', false ); 
+function blogen_scripts_editor() {
+    wp_enqueue_style( 'blogen-google-font-style', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900', false ); 
 }
-add_action('enqueue_block_editor_assets', 'blogon_scripts_editor');
+add_action('enqueue_block_editor_assets', 'blogen_scripts_editor');
 
 /**
 * Add Body Class
 */
-function blogon_body_classes( $classes ) {
+function blogen_body_classes( $classes ) {
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
@@ -385,23 +385,23 @@ function blogon_body_classes( $classes ) {
     }
 	return $classes;
 }
-add_filter( 'body_class', 'blogon_body_classes' );
+add_filter( 'body_class', 'blogen_body_classes' );
 
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function blogon_pingback_header() {
+function blogen_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'blogon_pingback_header' );
+add_action( 'wp_head', 'blogen_pingback_header' );
 
 /**
  * footer widget active check
  */
-function blogon_is_active_footer_sidebar(){
+function blogen_is_active_footer_sidebar(){
 	for( $i = 1; $i <= 4; $i++ ){
 		if ( is_active_sidebar( 'mainsite-footer-sidebar-'.$i ) ) :
 			return true;
@@ -413,8 +413,8 @@ function blogon_is_active_footer_sidebar(){
 /**
  * Excerpt
  */
-if(!function_exists('blogon_excerpt_max_charlength')):
-	function blogon_excerpt_max_charlength($charlength) {
+if(!function_exists('blogen_excerpt_max_charlength')):
+	function blogen_excerpt_max_charlength($charlength) {
 		$excerpt = get_the_excerpt();
 		$charlength++;
 
@@ -436,7 +436,7 @@ endif;
 /**
  * Comment List
  */
-function blogon_comments($comment, $args, $depth) { ?>
+function blogen_comments($comment, $args, $depth) { ?>
     <li <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
         <div class="mainsite-the-comment">	
             <div class="mainsite-author-img">
@@ -444,13 +444,13 @@ function blogon_comments($comment, $args, $depth) { ?>
             </div>
             <div class="mainsite-comment-text">
                 <span class="reply">
-                    <?php comment_reply_link(array_merge( $args, array('reply_text' => __('Reply', 'blogon'), 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment->comment_ID); ?>
-                    <?php edit_comment_link(__('Edit', 'blogon')); ?>
+                    <?php comment_reply_link(array_merge( $args, array('reply_text' => __('Reply', 'blogen'), 'depth' => $depth, 'max_depth' => $args['max_depth'])), $comment->comment_ID); ?>
+                    <?php edit_comment_link(__('Edit', 'blogen')); ?>
                 </span>
                 <h6 class="mainsite-author"><?php echo get_comment_author_link(); ?></h6>
-                <span class="mainsite-date"><?php printf(esc_html__('%1$s at %2$s', 'blogon'), wp_kses_post(get_comment_date()),  wp_kses_post(get_comment_time())) ?></span>
+                <span class="mainsite-date"><?php printf(esc_html__('%1$s at %2$s', 'blogen'), wp_kses_post(get_comment_date()),  wp_kses_post(get_comment_time())) ?></span>
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <em><i class="cb-font-info-circled"></i><?php esc_html_e('Comment awaiting approval', 'blogon'); ?></em>
+                    <em><i class="cb-font-info-circled"></i><?php esc_html_e('Comment awaiting approval', 'blogen'); ?></em>
                     <br />
                 <?php endif; ?>
                 <?php comment_text(); ?>
@@ -463,15 +463,15 @@ function blogon_comments($comment, $args, $depth) { ?>
 /*-------------------------------------------------------
 *           Include the TGM Plugin Activation class
 *-------------------------------------------------------*/
-add_action( 'tgmpa_register', 'blogon_plugins_include');
+add_action( 'tgmpa_register', 'blogen_plugins_include');
 
-if(!function_exists('blogon_plugins_include')):
+if(!function_exists('blogen_plugins_include')):
 
-    function blogon_plugins_include()
+    function blogen_plugins_include()
     {
         $plugins = array( 
                 array(
-                    'name'                  => esc_html__( 'Gutenberg Blocks Ultimate Post Blocks', 'blogon' ),
+                    'name'                  => esc_html__( 'Gutenberg Blocks Ultimate Post Blocks', 'blogen' ),
                     'slug'                  => 'ultimate-post',
                     'source'                => esc_url('https://downloads.wordpress.org/plugin/ultimate-post.zip'),
                     'required'              => false,
@@ -483,7 +483,7 @@ if(!function_exists('blogon_plugins_include')):
             );
 
     $config = array(
-        'id'           => 'blogon',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+        'id'           => 'blogen',                 // Unique ID for hashing notices for multiple instances of TGMPA.
         'default_path' => '',                      // Default absolute path to bundled plugins.
         'menu'         => 'tgmpa-install-plugins', // Menu slug.
         'has_notices'  => true,                    // Show admin notices or not.

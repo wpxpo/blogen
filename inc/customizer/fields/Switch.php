@@ -5,7 +5,7 @@ if( !class_exists( 'WP_Customize_Control' ) ){
 	return null;
 }
 
-class blogon_Switch_Control extends WP_Customize_Control {
+class blogen_Switch_Control extends WP_Customize_Control {
 
 	public $type = 'checkbox';
 	public $depends;

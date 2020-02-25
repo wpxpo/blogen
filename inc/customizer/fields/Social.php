@@ -1,16 +1,16 @@
 <?php
 defined('ABSPATH') || exit;
 
-if( class_exists( 'WP_Customize_Control' ) && !class_exists( 'blogon_Social_Control' ) ){
+if( class_exists( 'WP_Customize_Control' ) && !class_exists( 'blogen_Social_Control' ) ){
     return null;
 }
 
-class blogon_Social_Control extends WP_Customize_Control {
+class blogen_Social_Control extends WP_Customize_Control {
     
     public $type = 'social';
 
     public function enqueue() {
-		wp_enqueue_script( 'mainsite-social-js', BLOGON_URI . '/inc/customizer/assets/js/social.js', array( 'jquery' ), BLOGON_VERSION, true );
+		wp_enqueue_script( 'mainsite-social-js', BLOGEN_URI . '/inc/customizer/assets/js/social.js', array( 'jquery' ), BLOGEN_VERSION, true );
 	}
     
     public function render_content() {
@@ -34,7 +34,7 @@ class blogon_Social_Control extends WP_Customize_Control {
                     <input class="mainsite-field-social-url" value=""/>
                 </div>
 
-                <button class="mainsite-field-social-add"><?php esc_attr_e('+ Add New','blogon'); ?></button>
+                <button class="mainsite-field-social-add"><?php esc_attr_e('+ Add New','blogen'); ?></button>
             </div>
         </div>
         <?php

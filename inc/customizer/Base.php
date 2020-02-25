@@ -1,8 +1,8 @@
 <?php
 defined('ABSPATH') || exit;
 
-if (! class_exists('blogon_Base')) {
-    class blogon_Base{
+if (! class_exists('blogen_Base')) {
+    class blogen_Base{
 
         public function __construct(){
             add_action( 'customize_register', array($this, 'customizer_generator') );
@@ -14,14 +14,14 @@ if (! class_exists('blogon_Base')) {
 
         public function customizer_generator( $wp_customize ){
 
-            require_once BLOGON_DIR . '/inc/customizer/fields/Rgba.php';
-            require_once BLOGON_DIR . '/inc/customizer/fields/Separator.php';
-            require_once BLOGON_DIR . '/inc/customizer/fields/Switch.php';
-            require_once BLOGON_DIR . '/inc/customizer/fields/Layout.php';
-            require_once BLOGON_DIR . '/inc/customizer/fields/Typography.php';
-            require_once BLOGON_DIR . '/inc/customizer/fields/Select.php';
+            require_once BLOGEN_DIR . '/inc/customizer/fields/Rgba.php';
+            require_once BLOGEN_DIR . '/inc/customizer/fields/Separator.php';
+            require_once BLOGEN_DIR . '/inc/customizer/fields/Switch.php';
+            require_once BLOGEN_DIR . '/inc/customizer/fields/Layout.php';
+            require_once BLOGEN_DIR . '/inc/customizer/fields/Typography.php';
+            require_once BLOGEN_DIR . '/inc/customizer/fields/Select.php';
 
-            $prams = apply_filters( 'blogon_customizer', array() );
+            $prams = apply_filters( 'blogen_customizer', array() );
 
             if( is_array( $prams ) ){
                 foreach ( $prams as $panel ) {
@@ -80,7 +80,7 @@ if (! class_exists('blogon_Base')) {
                                         'default' => isset( $fields['default'] ) ? $fields['default'] : '',
                                         'sanitize_callback'    => array($this, 'field_sanitize_html')
                                     ));
-                                    $wp_customize->add_control( new blogon_Select_Control( $wp_customize, $fields['key'], array(
+                                    $wp_customize->add_control( new blogen_Select_Control( $wp_customize, $fields['key'], array(
                                         'label'     => $fields['title'],
                                         'section'   => $section['key'],
                                         'options'   => $fields['options'],
@@ -104,7 +104,7 @@ if (! class_exists('blogon_Base')) {
                                     $wp_customize->add_setting( $fields['key'], array(
                                         'sanitize_callback'    => array($this, 'field_sanitize_html')
                                     ) );
-                                    $wp_customize->add_control( new blogon_Separator_Control( $wp_customize, $fields['key'], array(
+                                    $wp_customize->add_control( new blogen_Separator_Control( $wp_customize, $fields['key'], array(
                                         'label'     => $fields['title'],
                                         'section'   => $section['key'],
                                     )));
@@ -139,7 +139,7 @@ if (! class_exists('blogon_Base')) {
                                         'default' => isset( $fields['default'] ) ? $fields['default'] : '',
                                         'sanitize_callback'    => array($this, 'field_sanitize_html')
                                     ));
-                                    $wp_customize->add_control( new blogon_Switch_Control( $wp_customize, $fields['key'], array(
+                                    $wp_customize->add_control( new blogen_Switch_Control( $wp_customize, $fields['key'], array(
                                         'label'   => $fields['title'],
                                         'section' => $section['key'],
                                         'settings' => $fields['key'],
@@ -163,7 +163,7 @@ if (! class_exists('blogon_Base')) {
                                         'default' => isset( $fields['default'] ) ? $fields['default'] : '',
                                         'sanitize_callback'    => array($this, 'field_sanitize_html')
                                     ));
-                                    $wp_customize->add_control( new blogon_Rgba_Control( $wp_customize, $fields['key'], array(
+                                    $wp_customize->add_control( new blogen_Rgba_Control( $wp_customize, $fields['key'], array(
                                         'label'         => $fields['title'],
                                         'section'       => $section['key'],
                                         'show_opacity'  => true,
@@ -175,7 +175,7 @@ if (! class_exists('blogon_Base')) {
                                         'default' => isset( $fields['default'] ) ? $fields['default'] : '',
                                         'sanitize_callback'    => array($this, 'field_sanitize_html')
                                     ));
-                                    $wp_customize->add_control( new blogon_Layout_Control( $wp_customize, $fields['key'], array(
+                                    $wp_customize->add_control( new blogen_Layout_Control( $wp_customize, $fields['key'], array(
                                         'label'     => $fields['title'],
                                         'key'       => $fields['key'],
                                         'section'   => $section['key'],
@@ -189,7 +189,7 @@ if (! class_exists('blogon_Base')) {
                                         'default' => isset( $fields['default'] ) ? $fields['default'] : '',
                                         'sanitize_callback'    => array($this, 'field_sanitize_html')
                                     ));
-                                    $wp_customize->add_control( new blogon_Typography_Control( $wp_customize, $fields['key'], array(
+                                    $wp_customize->add_control( new blogen_Typography_Control( $wp_customize, $fields['key'], array(
                                         'label'         => $fields['title'],
                                         'section'       => $section['key'],
                                     )));
@@ -205,6 +205,6 @@ if (! class_exists('blogon_Base')) {
             }
         }
     }
-    new blogon_Base();
+    new blogen_Base();
 }
 

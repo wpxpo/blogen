@@ -2,8 +2,8 @@
 <div class="mainsite-offcanvas-wrap"> 
     <div class="mainsite-offcanvas-header">
         <div class="mainsite-offcanvas-logo">
-            <?php $offcanvas_logo_img   = get_theme_mod( 'offcanvas_logo_img', BLOGON_URI.'/assets/images/logo.png' ); ?>
-            <img class="mainsite-offcanavs-logo" src="<?php echo esc_url( $offcanvas_logo_img ); ?>" alt="<?php esc_attr_e( 'Logo', 'blogon' ); ?>">
+            <?php $offcanvas_logo_img   = get_theme_mod( 'offcanvas_logo_img', BLOGEN_URI.'/assets/images/logo.png' ); ?>
+            <img class="mainsite-offcanavs-logo" src="<?php echo esc_url( $offcanvas_logo_img ); ?>" alt="<?php esc_attr_e( 'Logo', 'blogen' ); ?>">
         </div>
         <a class="mainsite-trigger" href="#" style="height: 20px; width: 20px; display: inline-block;">
             <i class="cb-font-cancel"></i>
@@ -11,7 +11,7 @@
     </div><!--/.mainsite-offcanvas-header-->
     <div class="mainsite-offcanvas-sidebar">     
         <div class="mainsite-offcanvas-menu">     
-            <nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'blogon' ); ?>">
+            <nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'blogen' ); ?>">
                 <?php
                 wp_nav_menu(
                     array(

@@ -16,13 +16,13 @@
             </div><!--/.col-md-6-->
             <div class="col-sm-12 col-md-5">
                 <div class="mainsite-topbar-info">
-                    <?php $blogon_number = get_theme_mod( 'contact_number', __('(123)456 7890', 'blogon') ); ?>
-                    <?php $blogon_email = get_theme_mod( 'email', 'demo@site.com' ); ?>
-                    <?php if($blogon_number) { ?>
-                        <span><i class="cb-font-phone"></i><?php echo esc_attr($blogon_number);?></span>
+                    <?php $blogen_number = get_theme_mod( 'contact_number', __('(123)456 7890', 'blogen') ); ?>
+                    <?php $blogen_email = get_theme_mod( 'email', 'demo@site.com' ); ?>
+                    <?php if($blogen_number) { ?>
+                        <span><i class="cb-font-phone"></i><?php echo esc_attr($blogen_number);?></span>
                     <?php } ?>
-                    <?php if($blogon_email) { ?>
-                    <span><i class="cb-font-mail-alt"></i><?php echo esc_attr($blogon_email);?></span>
+                    <?php if($blogen_email) { ?>
+                    <span><i class="cb-font-mail-alt"></i><?php echo esc_attr($blogen_email);?></span>
                     <?php } ?>
                 </div><!--/.mainsite-copyrhigt-->  
             </div><!--/.col-sm-6-->        

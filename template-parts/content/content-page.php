@@ -6,12 +6,12 @@
 			</header><!-- .entry-header -->
 		<?php }
 	?>
-	<?php blogon_post_thumbnail(); ?>
+	<?php blogen_post_thumbnail(); ?>
 	<div class="entry-content">
 		<?php
 		the_content();
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blogon' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blogen' ),
 			'after'  => '</div>',
 		) );
 		?>

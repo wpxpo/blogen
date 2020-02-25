@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
     <div id="page" class="mainsite-site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blogon' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blogen' ); ?></a>
 		<?php 
 		$header_layout = get_theme_mod( 'header_layout', 'one' );	
 		get_template_part( 'template-parts/header/header', $header_layout );?>

@@ -1,16 +1,16 @@
 <?php
 defined('ABSPATH') || exit;
 
-if( class_exists( 'WP_Customize_Control' ) && !class_exists( 'blogon_Typography_Control' ) ){
+if( class_exists( 'WP_Customize_Control' ) && !class_exists( 'blogen_Typography_Control' ) ){
     return null;
 }
 
-class blogon_Typography_Control extends WP_Customize_Control {
+class blogen_Typography_Control extends WP_Customize_Control {
     
     public $type = 'typography';
 
     public function enqueue() {
-		wp_enqueue_script( 'mainsite-typography-js', BLOGON_URI . 'assets/js/typography.js', array( 'jquery' ), BLOGON_VERSION, true );
+		wp_enqueue_script( 'mainsite-typography-js', BLOGEN_URI . 'assets/js/typography.js', array( 'jquery' ), BLOGEN_VERSION, true );
 	}
     
     public function render_content() { ?>

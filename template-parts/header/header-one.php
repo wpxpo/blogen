@@ -25,7 +25,7 @@
                     <?php get_template_part( 'template-parts/logo' );?>
                 </div><!-- .site-branding -->
                 <div class="mainsite-social-icon mainsite-flex-col">
-                    <a class="mainsite-btn-common mainsite-btn-dark" href="<?php echo esc_url(get_theme_mod( 'subscribe_url', '#' )); ?>"><?php echo esc_html( get_theme_mod( 'subscribe_text', __('Subscribe', 'blogon') ) );?></a>
+                    <a class="mainsite-btn-common mainsite-btn-dark" href="<?php echo esc_url(get_theme_mod( 'subscribe_url', '#' )); ?>"><?php echo esc_html( get_theme_mod( 'subscribe_text', __('Subscribe', 'blogen') ) );?></a>
                 </div>
             </div><!-- .mainsite-flex-wrap -->
         </div><!-- .container -->
@@ -43,8 +43,8 @@
                     <?php get_template_part( 'template-parts/main-menu' ); ?>
                 </div> 
                 <div class="mainsite-flex-col">   
-                    <?php $blogon_enable_search = get_theme_mod( 'enable_search', 1 );?>
-                        <?php if($blogon_enable_search) { ?>
+                    <?php $blogen_enable_search = get_theme_mod( 'enable_search', 1 );?>
+                        <?php if($blogen_enable_search) { ?>
                         <?php get_template_part( 'template-parts/header-search' );
                     } ?>
                 </div>   
@@ -52,8 +52,8 @@
         </div><!-- .container --> 
     </div><!-- .main-navigation-wrap --> 
     <?php get_template_part( 'template-parts/responsive-header' );?>
-    <?php $blogon_enable_search = get_theme_mod( 'enable_search', 1 );?>
-	<?php if($blogon_enable_search) { ?>
+    <?php $blogen_enable_search = get_theme_mod( 'enable_search', 1 );?>
+	<?php if($blogen_enable_search) { ?>
 		<div class="mainsite-header-search" style="display: none;">
 			<div class="mainsite-header-search-wrap">
 				<?php echo get_search_form();?>

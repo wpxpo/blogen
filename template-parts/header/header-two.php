@@ -8,7 +8,7 @@
             <?php endif; ?> 
             <div class="mainsite-flex-col">
                 <div class="mainsite-social-icon">
-                    <span><?php esc_html_e( 'Follow Us', 'blogon' );?></span>
+                    <span><?php esc_html_e( 'Follow Us', 'blogen' );?></span>
                     <?php get_template_part( 'template-parts/social-link' ); ?>
                 </div><!--/.mainsite-topbar-info-->  
             </div><!--/.mainsite-flex-col-->        
@@ -38,8 +38,8 @@
                     <?php get_template_part( 'template-parts/main-menu' ); ?>
                 </div> 
                 <div class="mainsite-flex-col">   
-                    <?php $blogon_enable_search = get_theme_mod( 'enable_search', 1 );?>
-                        <?php if($blogon_enable_search) { ?>
+                    <?php $blogen_enable_search = get_theme_mod( 'enable_search', 1 );?>
+                        <?php if($blogen_enable_search) { ?>
                         <?php get_template_part( 'template-parts/header-search' );
                     } ?>
                 </div>   
@@ -47,8 +47,8 @@
         </div><!-- .container --> 
     </div><!-- .main-navigation-wrap --> 
     <?php get_template_part( 'template-parts/responsive-header' );?>
-    <?php $blogon_enable_search = get_theme_mod( 'enable_search', 1 );?>
-	<?php if($blogon_enable_search) { ?>
+    <?php $blogen_enable_search = get_theme_mod( 'enable_search', 1 );?>
+	<?php if($blogen_enable_search) { ?>
 		<div class="mainsite-header-search" style="display: none;">
 			<div class="mainsite-header-search-wrap">
 				<?php echo get_search_form();?>

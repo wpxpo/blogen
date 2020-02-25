@@ -11,18 +11,18 @@
 			?>
 			<div class="mainsite-entry-meta">
 				<?php
-				blogon_posted_meta();
+				blogen_posted_meta();
 				?>
 			</div><!-- .mainsite-entry-meta -->
 		<?php endif; ?>
 	</header><!-- .mainsite-entry-header -->
-	<?php blogon_post_thumbnail(); ?>   
+	<?php blogen_post_thumbnail(); ?>   
 
 	<div class="entry-content">
         <?php
-        blogon_post_entry_content();
+        blogen_post_entry_content();
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blogon' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blogen' ),
 			'after'  => '</div>',
 		) );
 		?>

@@ -1,4 +1,4 @@
-<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Menu', 'blogon' ); ?>">
+<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main Menu', 'blogen' ); ?>">
     <?php
     if (has_nav_menu('primary')) {
         wp_nav_menu(
