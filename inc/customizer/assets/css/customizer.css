@@ -1,0 +1,43 @@
+/*
+* Customizer CSS
+*/
+
+/* Switch */
+.mainsite-customizer-switch{
+	position: relative;
+}
+.mainsite-customizer-switch input{
+	top: -20px;
+    position: absolute;
+    right: 0;
+}
+
+.mainsite-customizer-typography select{
+	display: inline-block;
+	width: 48%;
+}
+
+/* Layout */
+.mainsite-customizer-layout input{
+	border: 1px solid #ffffff;
+    visibility: hidden;
+	overflow: hidden;
+	height: 0px;
+}
+.mainsite-customizer-layout label{
+	display: block;
+}
+.mainsite-customizer-layout input[type="radio"]:checked + label {
+	border: 1px solid #3F51B5;
+	border-radius: 3px;
+}
+.mainsite-customizer-layout img{
+	width: 100%;
+	display: block;
+	border-radius: 3px;
+}
+
+/* Typography */
+.mainsite-customizer-typography-input{
+	display: none;
+}
